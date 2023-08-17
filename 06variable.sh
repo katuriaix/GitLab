@@ -8,4 +8,4 @@ PERSON=("katuri" "sreeni" "Rao")
 
 echo "First person: ${PERSON[0]}"
 
-#echo "All persons: ${PERSON[@]}"
+echo "All persons: ${PERSON[@]}"
