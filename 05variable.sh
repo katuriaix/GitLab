@@ -8,9 +8,9 @@ echo "User name entered is: $USERNAME"
 
 echo "Please enter your Password"
 
-read -s PASSWORD
+read -sp PASSWORD
 
-echo "User name entered is: -s $PASSWORD"
+echo "User name entered is: $PASSWORD"
 
 read -s EMAILID
 
