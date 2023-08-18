@@ -6,6 +6,8 @@ PERSON=("katuri" "sreeni" "Rao")
 
 # inside array we always refer values with inside ans it starts from 0
 
-#echo "First person: ${PERSON[0]}"
+echo "First person: ${PERSON[0]}"
 
 echo "All persons: ${PERSON[@]}"
+
+echo "Total count: ${PERSON[$#]}"
