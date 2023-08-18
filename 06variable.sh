@@ -10,4 +10,5 @@ echo "First person: ${PERSON[0]}"
 
 echo "All persons: ${PERSON[@]}"
 
-#echo "Total count: ${PERSON[$#]}"
+echo "Total count:${#PERSON[*]}"
+
