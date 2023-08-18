@@ -10,7 +10,7 @@ echo "Please enter your Password"
 
 read -s PASSWORD
 
-echo "User name entered is: $PASSWORD"
+echo "User name entered is: -s $PASSWORD"
 
 read -s EMAILID
 
