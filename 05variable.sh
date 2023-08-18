@@ -2,16 +2,16 @@
 
 echo "Please enter your username"
 
-read  USERNAME  # this is the variable where the value of the one user enter
+read -s USERNAME  # this is the variable where the value of the one user enter
 
 echo "User name entered is: $USERNAME"
 
 echo "Please enter your Password"
 
-read PASSWORD
+read -s PASSWORD
 
 echo "User name entered is: $PASSWORD"
 
-read EMAILID
+read -s EMAILID
 
 echo "enter your email id: $EMAILID"
