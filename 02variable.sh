@@ -4,4 +4,4 @@
 
 DATE=$(date +%m/%d/%y%r)
 #$date --date="yesterday"
-echo "Hello, this script is executed at timestamp:"
+echo "Hello, this script is executed at timestamp:$DATE"
