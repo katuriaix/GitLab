@@ -29,15 +29,16 @@ VALIDATE(){
 
 # installing inginx
 
-VALIDATE $?
+
 
 yum install nginx -y &>> $LOGFILE
 
-VALIDATE $?
+VALIDATE $? "Installed ngix"
 
 systemctl enable nginx &>> $LOGFILE
 
-VALIDATE $?
+VALIDATE $? "enabled ngnix"
 
 systemctl start nginx &>> $LOGFILE
 
+VALIDATE $? "Started ngnix"
