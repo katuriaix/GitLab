@@ -30,7 +30,6 @@ VALIDATE(){
 # installing inginx
 
 
-
 yum install nginx -y &>> $LOGFILE
 
 VALIDATE $? "Installed ngix"
@@ -42,3 +41,27 @@ VALIDATE $? "enabled ngnix"
 systemctl start nginx &>> $LOGFILE
 
 VALIDATE $? "Started ngnix"
+
+rm -rf /usr/share/nginx/html/* &>> $LOGFILE
+
+VALIDATE $? "Remove the default content that web server is serving"
+
+curl -o /tmp/web.zip https://roboshop-builds.s3.amazonaws.com/web.zip &>> $LOGFILE
+
+VALIDATE $? "Download the frontend content"
+
+cd /usr/share/nginx/html &>> $LOGFILE
+
+VALIDATE $? "Extract the frontend content"
+
+unzip /tmp/web.zip &>> $LOGFILE
+
+VALIDATE $? "unzip file"
+
+cp roboshop.repo /etc/nginx/default.d/roboshop.conf &>> $LOGFILE
+
+VALIDATE $? "copy roboshop.conf file"
+
+systemctl restart nginx &>> $LOGFILE
+
+VALIDATE $? "restart nginx"
