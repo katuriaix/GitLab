@@ -31,13 +31,13 @@ VALIDATE(){
 
 VALIDATE $?
 
-yum install nginx -y >> LOGFILE
+yum install nginx -y &>> $LOGFILE
 
 VALIDATE $?
 
-systemctl enable nginx >> LOGFILE
+systemctl enable nginx &>> $LOGFILE
 
 VALIDATE $?
 
-systemctl start nginx >> LOGFILE
+systemctl start nginx &>> $LOGFILE
 
