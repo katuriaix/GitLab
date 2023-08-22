@@ -58,7 +58,7 @@ unzip /tmp/web.zip &>> $LOGFILE
 
 VALIDATE $? "unzip file"
 
-cp roboshop.conf /etc/nginx/default.d/roboshop.conf &>> $LOGFILE
+mv roboshop.conf /etc/nginx/default.d/roboshop.conf &>> $LOGFILE
 
 VALIDATE $? "copy roboshop.conf file"
 
